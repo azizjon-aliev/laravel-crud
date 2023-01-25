@@ -1,0 +1,72 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Http\Controllers\Controller;
+use {{ namespaceAll }}
+
+class {{ className }}Controller extends Controller
+{
+    {{ prossesing_construct }}
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        {{ prossesing_index }}
+        {{ response_index }}
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \{{ namespaceStoreRequest }}  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store({{ StoreRequestClass }} $request)
+    {
+        {{ validate }}
+        {{ prossesing_store }}
+        {{ response_store }}
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        {{ prossesing_show }}
+        {{ response_show }}
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \{{ namespaceUpdateRequest }}  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update({{ UpdateRequestClass }} $request, $id)
+    {
+        {{ validate }}
+        {{ prossesing_update }}
+        {{ response_update }}
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        {{ prossesing_destroy }}
+        {{ response_destroy }}
+    }
+}

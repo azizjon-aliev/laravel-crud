@@ -1,0 +1,2 @@
+$object = {{ className }}::findOrFail($id);
+        $object->delete();

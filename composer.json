@@ -1,0 +1,25 @@
+{
+    "name": "azizjon-aliev/laravel-crud",
+    "description": "The Laravel library crud extenstion.",
+    "keywords": ["crud", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0.2"
+    },
+    "author": {
+        "name": "azizjon-aliev",
+        "email": "azizaliev2337@gmail.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Azizjonaliev\\Laravelcrud\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Azizjonaliev\\Laravelcrud\\Providers\\LaravelCrudProvider"
+            ]
+        }
+    }
+}

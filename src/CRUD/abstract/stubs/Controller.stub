@@ -1,0 +1,79 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Http\Controllers\Controller;
+use {{ namespaceStoreRequest }};
+use {{ namespaceUpdateRequest }};
+use {{ namespaceService }};
+
+class {{ className }}Controller extends Controller
+{
+    protected $service;
+
+    public function __construct({{ className }}Service $service)
+    {
+        $this->service = $service;
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return $this->service->get();
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \{{ namespaceStoreRequest }}  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(StoreRequest $request)
+    {
+        {{ validate }}
+        $response = $this->service->create($data);
+
+        return $response;
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return $this->service->get_object($id);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \{{ namespaceUpdateRequest }}  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(UpdateRequest $request, $id)
+    {
+        {{ validate }}
+        $response = $this->service->update($data, $id);
+
+        return $response;
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        return $this->service->delete($id);
+    }
+}

@@ -1,0 +1,6 @@
+protected $service;
+
+    public function __construct({{ className }}Service $service)
+    {
+        $this->service = $service;
+    }

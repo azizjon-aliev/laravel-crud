@@ -1,0 +1,43 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\{{ className }};
+{{ namespaceResource }}
+
+class {{ className }}Service
+{
+    public function get()
+    {
+        $objects = {{ className }}::all();
+        {{ response_index }}
+    }
+
+    public function get_object($id)
+    {
+        $object = {{ className }}::findOrFail($id);
+        {{ response_show }}
+    }
+
+    public function create($data)
+    {
+        $object = {{ className }}::create($data);
+        {{ response_store }}
+    }
+
+    public function update($data, $id)
+    {
+        $object = {{ className }}::findOrFail($id);
+        $object->update($data);
+
+        {{ response_update }}
+    }
+
+    public function delete($id)
+    {
+        $object = {{ className }}::findOrFail($id);
+        $object->delete();
+
+        {{ response_destroy }}
+    }
+}

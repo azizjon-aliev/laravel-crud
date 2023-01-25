@@ -1,0 +1,6 @@
+$data = $request->validate(
+            [
+                // rules
+            ],
+            $request->all()
+        );

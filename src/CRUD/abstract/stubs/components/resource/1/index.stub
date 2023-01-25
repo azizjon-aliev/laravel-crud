@@ -1,0 +1,1 @@
+return {{ className }}Resource::collection($objects);
