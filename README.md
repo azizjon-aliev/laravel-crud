@@ -155,3 +155,8 @@ php artisan serve
 ### Security
 
 If you discover any security-related issues, please email [azizaliev2337@gmail.com](mailto:azizaliev2337@gmail.com) instead of using the issue tracker.
+
+
+## License
+
+The Laravel-crud is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
