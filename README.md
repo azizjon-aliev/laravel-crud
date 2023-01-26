@@ -9,6 +9,9 @@ composer require azizjon-aliev/laravel-crud
 ## What It Does
 This package frees you from the chore of creating a Crud operation.
 
+> :warning: currently only implemented for "API", but will be added soon for "WEB" as well.
+
+
 After installation, you will have access to this command:
 ```
 php artisan make:crud MyCrud --Version=1 --service --resource --request 
